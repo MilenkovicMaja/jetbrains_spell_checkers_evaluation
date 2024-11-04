@@ -94,7 +94,6 @@ The script evaluates various spell checkers, including PySpellChecker, TextBlob,
 
 - **Recall**: Number of true positive results divided by the total number of actual positives(true positives + false negatives). A higher recall indicates fewer false negatives.
 
-
 - **Errors Percent**: The percentage of words that remain incorrect after spell checking.
 
 - **Top 7 Errors Percent**: The percentage of misspelled words not corrected by one of the top 7 suggestions provided by the spell checker.
@@ -152,7 +151,7 @@ The evaluation results indicate different levels of performance among the spell 
 - **Hunspell**:
   - **Strengths**: Best accuracy (75.6%), excellent suggestion quality (90.3% top 7 fix rate), good speed
   - **Weaknesses**: Relatively few compared to others
-  - **Best for**: General-purpose spell checking where reliability is key
+  - **Best for**: General-purpose spell checking where accuracy is important
 
 - **Jamspell**:
   - **Strengths**: Exceptional speed (371.94 words/sec), good suggestion quality (85.9% top 7 fix rate)
