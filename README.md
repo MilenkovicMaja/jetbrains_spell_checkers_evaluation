@@ -88,11 +88,12 @@ The script evaluates various spell checkers, including PySpellChecker, TextBlob,
 
 ### Metrics
 
+- **Accuracy**: Number of correct predictions (both true positives and true negatives) divided by the total number of predictions.
+
 - **Precision**: Number of true positive results divided by the total number of positive predictions(true positives + false positives). A higher precision indicates fewer false positives.
 
 - **Recall**: Number of true positive results divided by the total number of actual positives(true positives + false negatives). A higher recall indicates fewer false negatives.
 
-- **Accuracy**: Number of correct predictions (both true positives and true negatives) divided by the total number of predictions.
 
 - **Errors Percent**: The percentage of words that remain incorrect after spell checking.
 
