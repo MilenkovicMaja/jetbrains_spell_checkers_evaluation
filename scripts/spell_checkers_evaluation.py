@@ -1,10 +1,11 @@
 import pandas as pd
 import time
 from sklearn.metrics import precision_score, recall_score, accuracy_score
+import os
 
 # Load results
 try:
-    existing_results = pd.read_csv('spell_checker_results.csv')
+    existing_results = pd.read_csv('../data/processed/spell_checker_results.csv')
     evaluated_checkers = existing_results['Spell Checker'].tolist()
 except FileNotFoundError:
     existing_results = pd.DataFrame()
@@ -123,7 +124,7 @@ def spell_checker_autocorrect(word_list):
 
 def main():
 
-    data = pd.read_csv('dataset.csv')
+    data = pd.read_csv('../data/raw/dataset.csv')
     
     y_true = data['correct']
     incorrect_words = data['incorrect']
@@ -159,7 +160,8 @@ def main():
     else:
         combined_results = pd.DataFrame(new_results)
 
-    combined_results.to_csv('spell_checker_results.csv', index=False)
+    os.makedirs('data/processed', exist_ok=True)
+    combined_results.to_csv('../data/processed/spell_checker_results.csv', index=False)
     print("Results have been saved to spell_checker_results.csv")
 
 if __name__ == "__main__":

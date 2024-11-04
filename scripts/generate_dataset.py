@@ -48,7 +48,7 @@ def create_dataset(spelling_dict: Dict[str, List[str]], num_samples: int = 1000,
     return dataset
 
 def main():
-    file_path = 'data.txt'
+    file_path = 'data/raw/data.txt'
     
     try:
         spelling_dict = get_dict_from_spelling_file(file_path)  
